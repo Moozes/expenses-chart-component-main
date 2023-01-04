@@ -1,0 +1,9 @@
+@use './shared';
+
+main {
+    width: shared.$content-width;
+    @media (max-width: shared.$content-width) {
+        width: 80vw;
+        padding: 20px;
+    }
+}

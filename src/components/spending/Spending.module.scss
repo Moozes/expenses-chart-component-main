@@ -1,0 +1,67 @@
+@use '../../shared';
+
+.paper {
+    padding: 25px;
+    border-radius: 15px;
+    background-color: shared.$very-pale-orange;
+    .title {
+        font-size: calc(26rem / 16);
+        color: shared.$dark-brown;
+        margin-bottom: 30px;
+    }
+    .chart {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        width: 100%;
+        overflow-y: auto;
+        gap: 12px;
+        .bar {
+            flex-shrink: 0;
+            width: 50px;
+            div {
+                background-color: shared.$soft-red;
+                border-radius: 5px;
+            }
+            p {
+                text-align: center;
+                font-size: calc(16rem / 16);
+                color: shared.$medium-brown
+            }
+        }
+    }
+    hr {
+        background-color: shared.$cream;
+        margin: 30px 0;
+    }
+    p.small-text {
+        color: shared.$medium-brown;
+        font-size: calc(16rem / 16);
+    }
+    .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @media (max-width: calc(455rem / 16 )) {
+            gap: 12px;
+            justify-content: center;
+        }
+
+        h2 {
+            color: shared.$dark-brown;
+            font-size: calc(40rem / 16);
+        }
+        div {
+            p:nth-child(1) {
+                color: shared.$dark-brown;
+                font-weight: 700;
+                font-size: calc(16rem / 16);
+                text-align: right;
+            }
+            p:nth-child(2) {}
+        }
+    }
+
+}
+
